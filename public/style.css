@@ -39,14 +39,18 @@
     align-self: center;
   }
 
-  .update-title {
-    display: inline-block;
-    margin: 20px 10px;
-  }
-
   img {
     max-width: 100%;
     height: auto;
+  }
+
+  .section {
+    padding: 15vh 0;
+    min-height: 100vh;
+  }
+
+  .section .title {
+    margin-left: 2em;
   }
 
   .banner {
@@ -56,11 +60,41 @@
   }
 
   .banner-text {
-    margin-left: 5%;
+    margin-left: 10vw;
+    margin-top: 15vh;
   }
 
+  .title {
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: right;
+  }
+
+  svg {
+    fill: currentColor;
+  }
+
+  .bounce {
+    -moz-animation: bounce 3s infinite;
+    -webkit-animation: bounce 3s infinite;
+    animation: bounce 3s infinite;
+  }
+  @-moz-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      -moz-transform: translateY(0);
+      transform: translateY(0);
+    }
+    50% {
+      -moz-transform: translateY(15px);
+      transform: translateY(15px);
+    }
+  }
   .arrow {
     text-align: center;
+    background-image: url("data:image/svg+xml,%3Csvg enable-background='new 0 0 32 32' height='32px' id='Слой_1' version='1.1' viewBox='0 0 32 32' width='32px' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cpath d='M24.285,11.284L16,19.571l-8.285-8.288c-0.395-0.395-1.034-0.395-1.429,0 c-0.394,0.395-0.394,1.035,0,1.43l8.999,9.002l0,0l0,0c0.394,0.395,1.034,0.395,1.428,0l8.999-9.002 c0.394-0.395,0.394-1.036,0-1.431C25.319,10.889,24.679,10.889,24.285,11.284z' fill='%23ffffff' id='Expand_More'/%3E%3Cg/%3E%3Cg/%3E%3Cg/%3E%3Cg/%3E%3Cg/%3E%3Cg/%3E%3C/svg%3E ");
+    background-size: contain;
+    width: 40px;
+    height: 40px;
   }
 
   .bounce {
@@ -69,19 +103,16 @@
     animation: bounce 3s infinite;
   }
 
-  @import "compass/css3";
-
   @-webkit-keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
       -webkit-transform: translateY(0);
       transform: translateY(0);
     }
     50% {
-      -webkit-transform: translateY(-30px);
-      transform: translateY(-30px);
+      -webkit-transform: translateY(15px);
+      transform: translateY(15px);
     }
   }
-
   @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
       -moz-transform: translateY(0);
@@ -90,9 +121,77 @@
       transform: translateY(0);
     }
     50% {
-      -moz-transform: translateY(-30px);
-      -ms-transform: translateY(-30px);
-      -webkit-transform: translateY(-30px);
-      transform: translateY(-30px);
+      -moz-transform: translateY(15px);
+      -ms-transform: translateY(15px);
+      -webkit-transform: translateY(15px);
+      transform: translateY(15px);
     }
+  }
+
+  .featured-work {
+    background-color: #FCF5EF;
+  }
+
+  .card {
+    height: 45vh;
+    margin-bottom: 1rem;
+  }
+
+  .card-img-top {
+    height: 75%;
+  }
+
+  .card-body-hover {
+    position: absolute;
+    background-color: #DB847A;
+    padding: 1em;
+    width:100%;
+    height:75%;
+    z-index: 10;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    opacity: 0
+  }
+
+  .card-wrapper:hover .card-body-hover {
+    display: block !important;
+    opacity: 1;
+  }
+
+  .other-work {
+    background-color: #DB847A;
+    color: #ffffff;
+  }
+  .projects {
+    padding-left: 0;
+  }
+  .projects > li {
+    list-style: none;
+    margin-bottom: 1em;
+  }
+  .projects a {
+    color: #ffffff;
+  }
+  .projects h4 {
+    font-weight: 500 !important;
+  }
+  .work-wrapper ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1.25rem;
+  }
+  .work-wrapper ul > li {
+      margin-left: 15px;
+      font-size: 1.25rem;
+  }
+  /* Prevent nested li's from getting messed up */
+  .work-wrapper ul > li::before {
+      content: "-";
+      margin-left: -15px;
+      margin-right: 7px;
+  }
+
+  .contact {
+    background: linear-gradient(to right, transparent, #FCF5EF 95%), #FCF5EF url(./images/contactimg.png) no-repeat left;
+    background-size: contain;
   }
