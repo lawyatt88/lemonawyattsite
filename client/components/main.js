@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {Component} from 'react'
+import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {withRouter, Link} from 'react-router-dom'
@@ -10,12 +11,34 @@ import {Home} from '../components'
  *  else common to our entire app. The 'picture' inside the frame is the space
  *  rendered out by the component's `children`.
  */
-const Main = (props) => {
-  const {children} = props
+class Main extends Component {
+  constructor (props) {
+    super(props)
+  }
+  
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+    document.getElementById("navbar").style.opacity = "0";
+  }
 
-  return (
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll(event) {
+    let bannerHeight = ReactDOM.findDOMNode(this.banner).clientHeight
+    if (document.body.scrollTop > bannerHeight || document.documentElement.scrollTop > bannerHeight) {
+      document.getElementById("navbar").style.opacity = "1";
+    } else {
+      document.getElementById("navbar").style.opacity = "0";
+    }
+  }
+
+  render() {
+    const {children} = this.props
+    return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light">
+      <nav id="navbar" className="navbar fixed-top navbar-expand-lg navbar-light">
         <Link className="navbar-brand" to="/home" id="title">LeMona Wyatt</Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#top-nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />
@@ -24,15 +47,13 @@ const Main = (props) => {
         <div className="collapse navbar-collapse d-flex justify-content-end" id="top-nav">
           <ul className="nav navbar-nav navbar-right">
             <li><Link to="/products">About</Link></li>
-            <li><Link to="/products">About</Link></li>
-            <li><Link to="/products">About</Link></li>
           </ul>
         </div>
       </nav>
       <hr className="hr-nav" />
       {children}
     </div>
-  )
+  )}
 }
 
 /**

@@ -33,6 +33,13 @@
   nav {
     display: flex;
     padding: 1.25em 2em;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    background-color: #ffffff;
+  }
+
+  .hr-nav {
+    margin: 0;
   }
   
   .nav-item {

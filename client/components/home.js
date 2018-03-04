@@ -64,7 +64,7 @@ const Home = (props) => {
             {
                 <div>
                 <div className="container-fluid">
-                    <div className="banner row d-flex align-items-stretch">
+                    <div id="banner" name="banner" className="banner row d-flex align-items-stretch">
                         <div className="banner-text col-6 col-offset-2 d-flex align-items-center">
                             <div>
                                 <h1>I’m <b>LeMona Wyatt</b>, a design-minded fullstack software engineer, blockchain enthusiast, and diversity and inclusion advocate, focused on making things that make a difference.</h1>
@@ -75,7 +75,7 @@ const Home = (props) => {
                             <div className="arrow bounce" />
                         </div>
                     </div>
-                    <div className="section featured-work row d-flex align-items-stretch">
+                    <div id="featured-work" className="section featured-work row d-flex align-items-stretch">
                         <div className="col-3 d-inline-flex p-2">
                             <h4 className="title">Featured Work</h4>
                         </div>

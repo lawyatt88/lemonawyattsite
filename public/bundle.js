@@ -13352,7 +13352,6 @@ var _routes2 = _interopRequireDefault(_routes);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-console.log('ReactDOM', _reactDom2.default);
 _reactDom2.default.render(_react2.default.createElement(
   _reactRedux.Provider,
   { store: _store2.default },
@@ -30698,9 +30697,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(6);
 
 var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(141);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _propTypes = __webpack_require__(8);
 
@@ -30714,72 +30719,95 @@ var _components = __webpack_require__(69);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 /**
  * COMPONENT
  *  The Main component is our 'picture frame' - it displays the navbar and anything
  *  else common to our entire app. The 'picture' inside the frame is the space
  *  rendered out by the component's `children`.
  */
-var Main = function Main(props) {
-  var children = props.children;
+var Main = function (_Component) {
+  _inherits(Main, _Component);
 
+  function Main(props) {
+    _classCallCheck(this, Main);
 
-  return _react2.default.createElement(
-    'div',
-    null,
-    _react2.default.createElement(
-      'nav',
-      { className: 'navbar navbar-expand-lg navbar-light' },
-      _react2.default.createElement(
-        _reactRouterDom.Link,
-        { className: 'navbar-brand', to: '/home', id: 'title' },
-        'LeMona Wyatt'
-      ),
-      _react2.default.createElement(
-        'button',
-        { className: 'navbar-toggler', type: 'button', 'data-toggle': 'collapse', 'data-target': '#top-nav', 'aria-controls': 'navbarSupportedContent', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation' },
-        _react2.default.createElement('span', { className: 'navbar-toggler-icon' })
-      ),
-      _react2.default.createElement(
+    return _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).call(this, props));
+  }
+
+  _createClass(Main, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      window.addEventListener('scroll', this.handleScroll);
+      document.getElementById("navbar").style.opacity = "0";
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      window.removeEventListener('scroll', this.handleScroll);
+    }
+  }, {
+    key: 'handleScroll',
+    value: function handleScroll(event) {
+      var bannerHeight = _reactDom2.default.findDOMNode(this.banner).clientHeight;
+      if (document.body.scrollTop > bannerHeight || document.documentElement.scrollTop > bannerHeight) {
+        document.getElementById("navbar").style.opacity = "1";
+      } else {
+        document.getElementById("navbar").style.opacity = "0";
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var children = this.props.children;
+
+      return _react2.default.createElement(
         'div',
-        { className: 'collapse navbar-collapse d-flex justify-content-end', id: 'top-nav' },
+        null,
         _react2.default.createElement(
-          'ul',
-          { className: 'nav navbar-nav navbar-right' },
+          'nav',
+          { id: 'navbar', className: 'navbar fixed-top navbar-expand-lg navbar-light' },
           _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(
-              _reactRouterDom.Link,
-              { to: '/products' },
-              'About'
-            )
+            _reactRouterDom.Link,
+            { className: 'navbar-brand', to: '/home', id: 'title' },
+            'LeMona Wyatt'
           ),
           _react2.default.createElement(
-            'li',
-            null,
-            _react2.default.createElement(
-              _reactRouterDom.Link,
-              { to: '/products' },
-              'About'
-            )
+            'button',
+            { className: 'navbar-toggler', type: 'button', 'data-toggle': 'collapse', 'data-target': '#top-nav', 'aria-controls': 'navbarSupportedContent', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation' },
+            _react2.default.createElement('span', { className: 'navbar-toggler-icon' })
           ),
           _react2.default.createElement(
-            'li',
-            null,
+            'div',
+            { className: 'collapse navbar-collapse d-flex justify-content-end', id: 'top-nav' },
             _react2.default.createElement(
-              _reactRouterDom.Link,
-              { to: '/products' },
-              'About'
+              'ul',
+              { className: 'nav navbar-nav navbar-right' },
+              _react2.default.createElement(
+                'li',
+                null,
+                _react2.default.createElement(
+                  _reactRouterDom.Link,
+                  { to: '/products' },
+                  'About'
+                )
+              )
             )
           )
-        )
-      )
-    ),
-    _react2.default.createElement('hr', { className: 'hr-nav' }),
-    children
-  );
-};
+        ),
+        _react2.default.createElement('hr', { className: 'hr-nav' }),
+        children
+      );
+    }
+  }]);
+
+  return Main;
+}(_react.Component);
 
 /**
  * CONTAINER
@@ -30794,6 +30822,8 @@ var Main = function Main(props) {
 
 // The `withRouter` wrapper makes sure that updates are not blocked
 // when the url changes
+
+
 exports.default = (0, _reactRouterDom.withRouter)((0, _reactRedux.connect)(null, null)(Main));
 
 /**
@@ -30881,7 +30911,7 @@ var Home = function Home(props) {
                 { className: 'container-fluid' },
                 _react2.default.createElement(
                     'div',
-                    { className: 'banner row d-flex align-items-stretch' },
+                    { id: 'banner', name: 'banner', className: 'banner row d-flex align-items-stretch' },
                     _react2.default.createElement(
                         'div',
                         { className: 'banner-text col-6 col-offset-2 d-flex align-items-center' },
@@ -30914,7 +30944,7 @@ var Home = function Home(props) {
                 ),
                 _react2.default.createElement(
                     'div',
-                    { className: 'section featured-work row d-flex align-items-stretch' },
+                    { id: 'featured-work', className: 'section featured-work row d-flex align-items-stretch' },
                     _react2.default.createElement(
                         'div',
                         { className: 'col-3 d-inline-flex p-2' },

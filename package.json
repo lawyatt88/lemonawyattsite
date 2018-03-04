@@ -6,7 +6,8 @@
   "scripts": {
     "start:dev": "webpack -w & nodemon server",
     "start": "node server",
-    "build": "webpack -w"
+    "build": "webpack -w",
+    "start-dev": "nodemon server" 
   },
   "keywords": [
     "react",
