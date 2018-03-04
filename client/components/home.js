@@ -106,7 +106,7 @@ const Home = (props) => {
                         </div>
                     </div>
                     <div className="section contact row d-flex align-items-stretch">
-                            
+                        <div className="col-5 contact-img" />
                     </div>
                 </div>
                 </div>

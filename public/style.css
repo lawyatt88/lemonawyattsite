@@ -133,8 +133,8 @@
   }
 
   .card {
-    height: 45vh;
-    margin-bottom: 1rem;
+    height: 40vh;
+    margin-bottom: 2rem;
   }
 
   .card-img-top {
@@ -192,6 +192,11 @@
   }
 
   .contact {
+    background-color: #FCF5EF;
+  }
+
+  .contact-img {
     background: linear-gradient(to right, transparent, #FCF5EF 95%), #FCF5EF url(./images/contactimg.png) no-repeat left;
-    background-size: contain;
+    background-size: cover;
+    margin: -15vh 0;
   }
