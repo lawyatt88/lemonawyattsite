@@ -11,9 +11,9 @@ const ProjectCard = (props) => {
                 <div className="card-body-hover">
                     <p className="card-text">{description}</p>
                 </div>
-                <img className="card-img-top" src="..." alt="Card image cap" />
+                <img className="card-img-top" src={image} alt="Card image cap" />
                 <div className="card-body">
-                    <h5 className="card-title">{name}</h5>
+                    <h4 className="card-title">{name}</h4>
                 </div>
             </div>
         </div>

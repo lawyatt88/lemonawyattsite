@@ -64,6 +64,7 @@
     height: 100vh;
     background-color: #70A59F;
     color: #ffffff;
+    min-height: 600px;
   }
 
   .banner-text {
@@ -102,6 +103,7 @@
     background-size: contain;
     width: 40px;
     height: 40px;
+    cursor: pointer;
   }
 
   .bounce {
@@ -141,19 +143,30 @@
 
   .card {
     height: 40vh;
-    margin-bottom: 2rem;
+  }
+
+  .card-wrapper {
+    padding-bottom: 2rem;
   }
 
   .card-img-top {
-    height: 75%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+  }
+
+  .card-title{
+    text-align: center;
+    margin: .25rem;
   }
 
   .card-body-hover {
     position: absolute;
     background-color: #DB847A;
-    padding: 1em;
+    color:#ffffff;
+    padding: 1.25em;
     width:100%;
-    height:75%;
+    height:71%;
     z-index: 10;
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
@@ -180,7 +193,7 @@
     color: #ffffff;
   }
   .projects h4 {
-    font-weight: 500 !important;
+    font-weight: 300 !important;
   }
   .work-wrapper ul {
     list-style: none;

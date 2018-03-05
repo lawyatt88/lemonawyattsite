@@ -1,9 +1,20 @@
 import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 import { connect } from 'react-redux'
 import { withRouter, Link } from 'react-router-dom'
 import { ProjectCard } from '../components'
 
-const Home = (props) => {
+class Home extends Component {
+    constructor (props) {
+      super(props)
+      this.scrollToFeatured = this.scrollToFeatured.bind(this)
+    }
+
+    scrollToFeatured(evt) {
+        this.refs.featured.scrollIntoView({behavior: "smooth", block: "start"})
+    }
+
+    render(){
     const featuredWorkArr = [
         {
             name: "Potluck",
@@ -18,7 +29,7 @@ const Home = (props) => {
         {
             name: "Choko",
             description: "A fully functional e-commerce application for a chocolatier in which users can browse products, create an account, purchase products, leave reviews and view past orders.",
-            image: ""
+            image: "./images/screencapture-choko.png"
         },
         {
             name: "Brand Identity",
@@ -72,10 +83,10 @@ const Home = (props) => {
                         </div>
                         <div className="col-12 d-flex flex-column align-items-center mt-auto p-2">
                             <h4>Check out my work!</h4>
-                            <div className="arrow bounce" />
+                            <div className="arrow bounce" onClick={this.scrollToFeatured} />
                         </div>
                     </div>
-                    <div id="featured-work" className="section featured-work row d-flex align-items-stretch">
+                    <div id="featured-work" ref="featured" className="section featured-work row d-flex align-items-stretch">
                         <div className="col-3 d-inline-flex p-2">
                             <h4 className="title">Featured Work</h4>
                         </div>
@@ -92,7 +103,7 @@ const Home = (props) => {
                         <div className="col-8 d-inline-flex p-2 flex-wrap">
                             <ul className="projects">
                             {otherWorkArr.map((work, i) => {
-                                return (<li>
+                                return (<li key={i}>
                                     <div className="work-wrapper">
                                         <a href={work.link}><h4>{work.name}</h4></a>
                                         <h5>{work.description}</h5>
@@ -113,7 +124,7 @@ const Home = (props) => {
              }
         </div>
     
-    )
+    )}
 }
 
 export default connect(null, null)(Home);
