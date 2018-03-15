@@ -30933,7 +30933,7 @@ var Home = function (_Component) {
                             ),
                             _react2.default.createElement(
                                 'div',
-                                { className: 'col-12 d-flex flex-column align-items-center mt-auto p-2' },
+                                { id: 'arrow-wrapper', className: 'col-12 d-flex flex-column align-items-center mt-auto p-2' },
                                 _react2.default.createElement(
                                     'h4',
                                     null,
