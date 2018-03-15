@@ -81,7 +81,7 @@ class Home extends Component {
                                 <h1>I’m <b>LeMona Wyatt</b>, a design-minded fullstack software engineer, blockchain enthusiast, and diversity and inclusion advocate, focused on making things that make a difference.</h1>
                             </div>
                         </div>
-                        <div className="col-12 d-flex flex-column align-items-center mt-auto p-2">
+                        <div id="arrow-wrapper" className="col-12 d-flex flex-column align-items-center mt-auto p-2">
                             <h4>Check out my work!</h4>
                             <div className="arrow bounce" onClick={this.scrollToFeatured} />
                         </div>

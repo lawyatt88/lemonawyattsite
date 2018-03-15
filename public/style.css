@@ -78,6 +78,11 @@
     text-align: right;
   }
 
+  #arrow-wrapper {
+    position: absolute;
+    bottom: 0;
+  }
+
   svg {
     fill: currentColor;
   }
