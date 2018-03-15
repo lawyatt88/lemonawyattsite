@@ -233,7 +233,8 @@
 
   @media only screen and (max-width: 576px) {
     h1 {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
+      margin-bottom: 2em;
     }
     .navbar {
       border-bottom: 1px solid rgba(0,0,0,.1);
@@ -269,5 +270,6 @@
  @media only screen and (max-width: 768px) {
     h1 {
       font-size: 2rem;
+      margin-bottom: 2em;
     }
   }
