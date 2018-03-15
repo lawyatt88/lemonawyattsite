@@ -19,7 +19,7 @@ class Home extends Component {
         {
             name: "Potluck",
             description: "An app for reducing food waste on a local scale in which users barter excess food items via smart contracts and blockchain technology.",
-            image: ""
+            image: "./images/screencapture_potluck_community.png"
         },
         {
             name: "Picspiration",
@@ -76,7 +76,7 @@ class Home extends Component {
                 <div>
                 <div className="container-fluid">
                     <div id="banner" name="banner" className="banner row d-flex align-items-stretch">
-                        <div className="banner-text col-6 col-offset-2 d-flex align-items-center">
+                        <div className="banner-text col-12 col-sm-6 col-md-8 d-flex align-items-center">
                             <div>
                                 <h1>I’m <b>LeMona Wyatt</b>, a design-minded fullstack software engineer, blockchain enthusiast, and diversity and inclusion advocate, focused on making things that make a difference.</h1>
                             </div>
@@ -87,25 +87,21 @@ class Home extends Component {
                         </div>
                     </div>
                     <div id="featured-work" ref="featured" className="section featured-work row d-flex align-items-stretch">
-                        <div className="col-3 d-inline-flex p-2">
-                            <h4 className="title">Featured Work</h4>
-                        </div>
-                        <div className="col-8 d-inline-flex p-2 flex-wrap">
+                        <h4 className="title col-12 col-md-3 d-inline-flex p-2">Featured Work</h4>
+                        <div className="col-12 col-md-8 d-inline-flex p-2 flex-wrap">
                             {featuredWorkArr.map((work, i) => {
                                 return <ProjectCard key={i} name={work.name} description={work.description} image={work.image} />
                             })}
                         </div>
                     </div>
                     <div className="section other-work row d-flex align-items-stretch">
-                        <div className="col-3 d-inline-flex p-2">
-                            <h4 className="title">Other Work</h4>
-                        </div>
-                        <div className="col-8 d-inline-flex p-2 flex-wrap">
+                        <h4 className="title col-12 col-md-3 d-inline-flex p-2r">Other Work</h4>
+                        <div className="col-12 col-md-8 d-inline-flex p-2 flex-wrap">
                             <ul className="projects">
                             {otherWorkArr.map((work, i) => {
                                 return (<li key={i}>
                                     <div className="work-wrapper">
-                                        <a href={work.link}><h4>{work.name}</h4></a>
+                                        <a href={work.link} target="_blank"><h4>{work.name}</h4></a>
                                         <h5>{work.description}</h5>
                                         <ul>
                                             {work.details.map((detail, i) => <li key={i}>{detail}</li>)}
@@ -117,13 +113,12 @@ class Home extends Component {
                         </div>
                     </div>
                     <div className="section contact row d-flex align-items-stretch">
-                        <div className="col-5 contact-img" />
+                        <div className="col-12 col-md-5 contact-img" />
                     </div>
                 </div>
                 </div>
              }
         </div>
-    
     )}
 }
 

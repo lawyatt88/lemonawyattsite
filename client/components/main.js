@@ -45,9 +45,6 @@ class Main extends Component {
         </button>
 
         <div className="collapse navbar-collapse d-flex justify-content-end" id="top-nav">
-          <ul className="nav navbar-nav navbar-right">
-            <li><Link to="/products">About</Link></li>
-          </ul>
         </div>
       </nav>
       <hr className="hr-nav" />
@@ -56,19 +53,6 @@ class Main extends Component {
   )}
 }
 
-/**
- * CONTAINER
- */
-
-// const mapDispatch = (dispatch) => {
-//   return {
-//     handleClick () {
-//     }
-//   }
-// }
-
-// The `withRouter` wrapper makes sure that updates are not blocked
-// when the url changes
 export default withRouter(connect(null, null)(Main))
 
 /**

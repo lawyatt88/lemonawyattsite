@@ -30782,23 +30782,7 @@ var Main = function (_Component) {
             { className: 'navbar-toggler', type: 'button', 'data-toggle': 'collapse', 'data-target': '#top-nav', 'aria-controls': 'navbarSupportedContent', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation' },
             _react2.default.createElement('span', { className: 'navbar-toggler-icon' })
           ),
-          _react2.default.createElement(
-            'div',
-            { className: 'collapse navbar-collapse d-flex justify-content-end', id: 'top-nav' },
-            _react2.default.createElement(
-              'ul',
-              { className: 'nav navbar-nav navbar-right' },
-              _react2.default.createElement(
-                'li',
-                null,
-                _react2.default.createElement(
-                  _reactRouterDom.Link,
-                  { to: '/products' },
-                  'About'
-                )
-              )
-            )
-          )
+          _react2.default.createElement('div', { className: 'collapse navbar-collapse d-flex justify-content-end', id: 'top-nav' })
         ),
         _react2.default.createElement('hr', { className: 'hr-nav' }),
         children
@@ -30808,21 +30792,6 @@ var Main = function (_Component) {
 
   return Main;
 }(_react.Component);
-
-/**
- * CONTAINER
- */
-
-// const mapDispatch = (dispatch) => {
-//   return {
-//     handleClick () {
-//     }
-//   }
-// }
-
-// The `withRouter` wrapper makes sure that updates are not blocked
-// when the url changes
-
 
 exports.default = (0, _reactRouterDom.withRouter)((0, _reactRedux.connect)(null, null)(Main));
 
@@ -30892,7 +30861,7 @@ var Home = function (_Component) {
             var featuredWorkArr = [{
                 name: "Potluck",
                 description: "An app for reducing food waste on a local scale in which users barter excess food items via smart contracts and blockchain technology.",
-                image: ""
+                image: "./images/screencapture_potluck_community.png"
             }, {
                 name: "Picspiration",
                 description: "Mobile application that harnesses the word predictability features of the Clarifai API to find relevant quotes based on image input.",
@@ -30945,7 +30914,7 @@ var Home = function (_Component) {
                             { id: 'banner', name: 'banner', className: 'banner row d-flex align-items-stretch' },
                             _react2.default.createElement(
                                 'div',
-                                { className: 'banner-text col-6 col-offset-2 d-flex align-items-center' },
+                                { className: 'banner-text col-12 col-sm-6 col-md-8 d-flex align-items-center' },
                                 _react2.default.createElement(
                                     'div',
                                     null,
@@ -30977,17 +30946,13 @@ var Home = function (_Component) {
                             'div',
                             { id: 'featured-work', ref: 'featured', className: 'section featured-work row d-flex align-items-stretch' },
                             _react2.default.createElement(
-                                'div',
-                                { className: 'col-3 d-inline-flex p-2' },
-                                _react2.default.createElement(
-                                    'h4',
-                                    { className: 'title' },
-                                    'Featured Work'
-                                )
+                                'h4',
+                                { className: 'title col-12 col-md-3 d-inline-flex p-2' },
+                                'Featured Work'
                             ),
                             _react2.default.createElement(
                                 'div',
-                                { className: 'col-8 d-inline-flex p-2 flex-wrap' },
+                                { className: 'col-12 col-md-8 d-inline-flex p-2 flex-wrap' },
                                 featuredWorkArr.map(function (work, i) {
                                     return _react2.default.createElement(_components.ProjectCard, { key: i, name: work.name, description: work.description, image: work.image });
                                 })
@@ -30997,17 +30962,13 @@ var Home = function (_Component) {
                             'div',
                             { className: 'section other-work row d-flex align-items-stretch' },
                             _react2.default.createElement(
-                                'div',
-                                { className: 'col-3 d-inline-flex p-2' },
-                                _react2.default.createElement(
-                                    'h4',
-                                    { className: 'title' },
-                                    'Other Work'
-                                )
+                                'h4',
+                                { className: 'title col-12 col-md-3 d-inline-flex p-2r' },
+                                'Other Work'
                             ),
                             _react2.default.createElement(
                                 'div',
-                                { className: 'col-8 d-inline-flex p-2 flex-wrap' },
+                                { className: 'col-12 col-md-8 d-inline-flex p-2 flex-wrap' },
                                 _react2.default.createElement(
                                     'ul',
                                     { className: 'projects' },
@@ -31020,7 +30981,7 @@ var Home = function (_Component) {
                                                 { className: 'work-wrapper' },
                                                 _react2.default.createElement(
                                                     'a',
-                                                    { href: work.link },
+                                                    { href: work.link, target: '_blank' },
                                                     _react2.default.createElement(
                                                         'h4',
                                                         null,
@@ -31052,7 +31013,7 @@ var Home = function (_Component) {
                         _react2.default.createElement(
                             'div',
                             { className: 'section contact row d-flex align-items-stretch' },
-                            _react2.default.createElement('div', { className: 'col-5 contact-img' })
+                            _react2.default.createElement('div', { className: 'col-12 col-md-5 contact-img' })
                         )
                     )
                 )
@@ -31092,9 +31053,10 @@ var ProjectCard = function ProjectCard(props) {
         description = props.description,
         image = props.image;
 
+    var colWidth = name === "Brand Identity" ? "col-12" : "col-12 col-md-4";
     return _react2.default.createElement(
         'div',
-        { className: 'card-wrapper col-4' },
+        { className: 'card-wrapper ' + colWidth },
         _react2.default.createElement(
             'div',
             { className: 'card' },
@@ -31107,7 +31069,7 @@ var ProjectCard = function ProjectCard(props) {
                     description
                 )
             ),
-            _react2.default.createElement('img', { className: 'card-img-top', src: image, alt: 'Card image cap' }),
+            _react2.default.createElement('div', { className: 'card-img-top', style: { backgroundImage: 'url(' + image + ')' } }),
             _react2.default.createElement(
                 'div',
                 { className: 'card-body' },

@@ -68,7 +68,7 @@
   }
 
   .banner-text {
-    margin-left: 10vw;
+    padding: 10vw;
     margin-top: 15vh;
   }
 
@@ -149,9 +149,15 @@
     padding-bottom: 2rem;
   }
 
+  .card-wrapper:last-child {
+    padding-bottom: 0;
+  }
+
   .card-img-top {
-    height: 100%;
-    object-fit: cover;
+    height: 80%;
+    /* object-fit: cover; */
+    background-position: top center;
+    background-size: cover;
     border-bottom: 1px solid rgba(0,0,0,.1);
   }
 
@@ -166,7 +172,7 @@
     color:#ffffff;
     padding: 1.25em;
     width:100%;
-    height:71%;
+    height:100%;
     z-index: 10;
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
@@ -219,4 +225,45 @@
     background: linear-gradient(to right, transparent, #FCF5EF 95%), #FCF5EF url(./images/contactimg.png) no-repeat left;
     background-size: cover;
     margin: -15vh 0;
+  }
+
+  @media only screen and (max-width: 576px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+    .navbar {
+      border-bottom: 1px solid rgba(0,0,0,.1);
+    }
+    .projects h4 {
+      font-size: 1.25rem;
+    }
+    .work-wrapper ul > li, h5 {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    .section {
+      padding: 10vh 0;
+    }
+    .section .title {
+      margin-left: 0;
+      text-align: center;
+      justify-content: center!important;
+    }
+    .contact-img {
+      margin: -10vh 0;
+    }
+
+    .projects {
+      padding: 0 1.5em;
+    }
+
+    .card {
+      height: 60vh;
+    }
+  }
+
+ @media only screen and (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
   }
