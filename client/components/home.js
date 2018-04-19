@@ -19,22 +19,28 @@ class Home extends Component {
         {
             name: "Potluck",
             description: "An app for reducing food waste on a local scale in which users barter excess food items via smart contracts and blockchain technology.",
-            image: "./images/screencapture_potluck_community.png"
+            image: "./images/screencapture_potluck_community.png",
+            link: "",
+            github: ""
         },
         {
             name: "Picspiration",
             description: "Mobile application that harnesses the word predictability features of the Clarifai API to find relevant quotes based on image input.",
-            image: ""
+            image: "",
+            link: "",
+            github: ""
         },
         {
             name: "Choko",
             description: "A fully functional e-commerce application for a chocolatier in which users can browse products, create an account, purchase products, leave reviews and view past orders.",
-            image: "./images/screencapture-choko.png"
+            image: "./images/screencapture-choko.png",
+            link: "",
+            github: ""
         },
         {
             name: "Brand Identity",
             description: "",
-            image: ""
+            image: "",
         }
     ]
 
@@ -90,7 +96,7 @@ class Home extends Component {
                         <h4 className="title col-12 col-md-3 d-inline-flex p-2">Featured Work</h4>
                         <div className="col-12 col-md-8 d-inline-flex p-2 flex-wrap">
                             {featuredWorkArr.map((work, i) => {
-                                return <ProjectCard key={i} name={work.name} description={work.description} image={work.image} />
+                                return <ProjectCard key={i} {...work} />
                             })}
                         </div>
                     </div>

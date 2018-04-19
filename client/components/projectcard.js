@@ -4,13 +4,19 @@ import { withRouter, Link } from 'react-router-dom'
 
 const ProjectCard = (props) => {
     console.log('props', props)
-    const { name, description, image } = props
+    const { name, description, image, link, github } = props
     let colWidth = name === "Brand Identity" ? "col-12" : "col-12 col-md-4"
     return (
         <div className={`card-wrapper ${colWidth}`}>
             <div className="card">
                 <div className="card-body-hover">
                     <p className="card-text">{description}</p>
+                    <a href={link}>
+                        <i className="fas fa-external-link-alt" />
+                    </a>
+                    <a href={github}>
+                        <i className="fab fa-github" />
+                    </a>
                 </div>
                 {/*<img className="card-img-top" src={image} alt="Card image cap" />*/}
                 <div className="card-img-top" style={{backgroundImage: `url(${image})`}} />

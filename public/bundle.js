@@ -30814,6 +30814,8 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(6);
@@ -30861,15 +30863,21 @@ var Home = function (_Component) {
             var featuredWorkArr = [{
                 name: "Potluck",
                 description: "An app for reducing food waste on a local scale in which users barter excess food items via smart contracts and blockchain technology.",
-                image: "./images/screencapture_potluck_community.png"
+                image: "./images/screencapture_potluck_community.png",
+                link: "",
+                github: ""
             }, {
                 name: "Picspiration",
                 description: "Mobile application that harnesses the word predictability features of the Clarifai API to find relevant quotes based on image input.",
-                image: ""
+                image: "",
+                link: "",
+                github: ""
             }, {
                 name: "Choko",
                 description: "A fully functional e-commerce application for a chocolatier in which users can browse products, create an account, purchase products, leave reviews and view past orders.",
-                image: "./images/screencapture-choko.png"
+                image: "./images/screencapture-choko.png",
+                link: "",
+                github: ""
             }, {
                 name: "Brand Identity",
                 description: "",
@@ -30954,7 +30962,7 @@ var Home = function (_Component) {
                                 'div',
                                 { className: 'col-12 col-md-8 d-inline-flex p-2 flex-wrap' },
                                 featuredWorkArr.map(function (work, i) {
-                                    return _react2.default.createElement(_components.ProjectCard, { key: i, name: work.name, description: work.description, image: work.image });
+                                    return _react2.default.createElement(_components.ProjectCard, _extends({ key: i }, work));
                                 })
                             )
                         ),
@@ -31051,7 +31059,9 @@ var ProjectCard = function ProjectCard(props) {
     console.log('props', props);
     var name = props.name,
         description = props.description,
-        image = props.image;
+        image = props.image,
+        link = props.link,
+        github = props.github;
 
     var colWidth = name === "Brand Identity" ? "col-12" : "col-12 col-md-4";
     return _react2.default.createElement(
@@ -31067,6 +31077,16 @@ var ProjectCard = function ProjectCard(props) {
                     'p',
                     { className: 'card-text' },
                     description
+                ),
+                _react2.default.createElement(
+                    'a',
+                    { href: link },
+                    _react2.default.createElement('i', { className: 'fas fa-external-link-alt' })
+                ),
+                _react2.default.createElement(
+                    'a',
+                    { href: github },
+                    _react2.default.createElement('i', { className: 'fab fa-github' })
                 )
             ),
             _react2.default.createElement('div', { className: 'card-img-top', style: { backgroundImage: 'url(' + image + ')' } }),
