@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { withRouter, Link } from 'react-router-dom'
 
 const ProjectCard = (props) => {
-    console.log('props', props)
     const { name, description, image, link, github } = props
     let colWidth = name === "Brand Identity" ? "col-12" : "col-12 col-md-4"
     return (
