@@ -30876,7 +30876,7 @@ var Home = function (_Component) {
                 name: "Choko",
                 description: "A fully functional e-commerce application for a chocolatier in which users can browse products, create an account, purchase products, leave reviews and view past orders.",
                 image: "./images/screencapture-choko.png",
-                link: "choko-hopper.herokuapp.com",
+                link: "https://choko-hopper.herokuapp.com",
                 github: "https://github.com/Choko-Hopper/choko-hopper"
             }, {
                 name: "Brand Identity",
