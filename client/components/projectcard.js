@@ -11,9 +11,10 @@ const ProjectCard = (props) => {
             <div className="card">
                 <div className="card-body-hover">
                     <p className="card-text">{description}</p>
-                    <a href={link} target="_blank">
+                    {link && 
+                    (<a href={link} target="_blank">
                         <i className="fas fa-external-link-alt" />
-                    </a>
+                    </a>)}
                     <a href={github} target="_blank">
                         <i className="fab fa-github" />
                     </a>

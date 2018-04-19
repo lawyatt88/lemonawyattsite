@@ -21,21 +21,21 @@ class Home extends Component {
             description: "An app for reducing food waste on a local scale in which users barter excess food items via smart contracts and blockchain technology.",
             image: "./images/screencapture_potluck_community.png",
             link: "",
-            github: ""
+            github: "https://github.com/lawyatt88/Potluckv3"
         },
         {
             name: "Picspiration",
             description: "Mobile application that harnesses the word predictability features of the Clarifai API to find relevant quotes based on image input.",
             image: "",
             link: "",
-            github: ""
+            github: "https://github.com/lawyatt88/picspiration"
         },
         {
             name: "Choko",
             description: "A fully functional e-commerce application for a chocolatier in which users can browse products, create an account, purchase products, leave reviews and view past orders.",
             image: "./images/screencapture-choko.png",
-            link: "",
-            github: ""
+            link: "choko-hopper.herokuapp.com",
+            github: "https://github.com/Choko-Hopper/choko-hopper"
         },
         {
             name: "Brand Identity",
