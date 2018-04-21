@@ -31024,7 +31024,7 @@ var Home = function (_Component) {
                             _react2.default.createElement('div', { className: 'col-12 col-md-5 contact-img' }),
                             _react2.default.createElement(
                                 'div',
-                                { 'class': 'row justify-content-center' },
+                                { className: 'row justify-content-center' },
                                 _react2.default.createElement(
                                     'div',
                                     { className: 'col-10 col-md-6 col-md-offset-6 contact' },
