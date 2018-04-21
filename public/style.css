@@ -239,7 +239,7 @@
     .navbar {
       border-bottom: 1px solid rgba(0,0,0,.1);
     }
-    .projects h4 {
+    .projects h4, .contact h4 {
       font-size: 1.25rem;
     }
     .work-wrapper ul > li, h5 {
