@@ -31021,7 +31021,22 @@ var Home = function (_Component) {
                         _react2.default.createElement(
                             'div',
                             { className: 'section contact row d-flex align-items-stretch' },
-                            _react2.default.createElement('div', { className: 'col-12 col-md-5 contact-img' })
+                            _react2.default.createElement('div', { className: 'col-12 col-md-5 contact-img' }),
+                            _react2.default.createElement(
+                                'div',
+                                { className: 'col-10 col-md-6 col-md-offset-6 contact' },
+                                _react2.default.createElement(
+                                    'p',
+                                    null,
+                                    'Thank you so much for visiting lemonawyatt.com! I am currently actively seeking a position as a full stack software engineer or solidity developer. If you like what you see, have any leads, or any interesting project ideas, please reach out to me at ',
+                                    _react2.default.createElement(
+                                        'a',
+                                        { href: 'mailto:lemonawyatt@gmail.com' },
+                                        'lemonawyatt@gmail.com'
+                                    ),
+                                    ' or through any of the social media sites below. Stay tuned for my upcoming blog BlackGirlonBlockchain.com! '
+                                )
+                            )
                         )
                     )
                 )
