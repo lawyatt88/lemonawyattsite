@@ -265,6 +265,11 @@
     .card {
       height: 60vh;
     }
+
+    .contact {
+      position: absolute;
+      background-color: rgba(252,245,239, 0.5);
+    }
   }
 
  @media only screen and (max-width: 768px) {
