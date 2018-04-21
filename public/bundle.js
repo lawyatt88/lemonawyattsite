@@ -30878,10 +30878,6 @@ var Home = function (_Component) {
                 image: "./images/screencapture-choko.png",
                 link: "https://choko-hopper.herokuapp.com",
                 github: "https://github.com/Choko-Hopper/choko-hopper"
-            }, {
-                name: "Brand Identity",
-                description: "",
-                image: ""
             }];
 
             var otherWorkArr = [{
@@ -31024,7 +31020,7 @@ var Home = function (_Component) {
                             _react2.default.createElement('div', { className: 'col-12 col-md-5 contact-img' }),
                             _react2.default.createElement(
                                 'div',
-                                { className: 'col-12 col-md-6 col-md-offset-6 contact-content' },
+                                { className: 'col-12 col-md-5 col-md-offset-6 contact-content' },
                                 _react2.default.createElement(
                                     'h5',
                                     null,
