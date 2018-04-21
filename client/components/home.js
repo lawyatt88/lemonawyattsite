@@ -120,10 +120,8 @@ class Home extends Component {
                     </div>
                     <div className="section contact row d-flex align-items-stretch">
                         <div className="col-12 col-md-5 contact-img" />
-                        <div class="row justify-content-center">
-                            <div className="col-10 col-md-6 col-md-offset-6 contact">
-                                <h4>Thank you so much for visiting lemonawyatt.com! I am currently actively seeking a position as a <b>full stack software engineer</b> or <b>solidity developer</b>. If you like what you see, have any leads, or any interesting project ideas, please reach out to me at <a href="mailto:lemonawyatt@gmail.com">lemonawyatt@gmail.com</a> or through any of the social media sites below. Stay tuned for my upcoming blog BlackGirlonBlockchain.com!</h4>
-                            </div>
+                        <div className="col-10 col-md-6 col-md-offset-6 contact">
+                            <h4>Thank you so much for visiting lemonawyatt.com! I am currently actively seeking a position as a <b>full stack software engineer</b> or <b>solidity developer</b>. If you like what you see, have any leads, or any interesting project ideas, please reach out to me at <a href="mailto:lemonawyatt@gmail.com">lemonawyatt@gmail.com</a> or through any of the social media sites below. Stay tuned for my upcoming blog BlackGirlonBlockchain.com!</h4>
                         </div>
                     </div>
                 </div>

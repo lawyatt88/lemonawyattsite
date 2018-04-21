@@ -269,6 +269,7 @@
     .contact {
       position: absolute;
       background-color: rgba(252,245,239, 0.5);
+      width: 100%;
     }
   }
 
