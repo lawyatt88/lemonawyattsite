@@ -239,7 +239,7 @@
     .navbar {
       border-bottom: 1px solid rgba(0,0,0,.1);
     }
-    .projects h4, .contact h4 {
+    .projects h4 {
       font-size: 1.25rem;
     }
     .work-wrapper ul > li, h5 {
@@ -266,10 +266,12 @@
       height: 60vh;
     }
 
-    .contact {
+    .contact-content {
       position: absolute;
-      background-color: rgba(252,245,239, 0.5);
       width: 100%;
+      background-color: rgba(252,245,239, 0.5);
+      padding: 2rem;
+      margin-top: 20vh;
     }
   }
 
