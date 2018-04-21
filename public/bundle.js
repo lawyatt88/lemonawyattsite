@@ -31024,29 +31024,34 @@ var Home = function (_Component) {
                             _react2.default.createElement('div', { className: 'col-12 col-md-5 contact-img' }),
                             _react2.default.createElement(
                                 'div',
-                                { className: 'col-10 col-md-6 col-md-offset-6 contact' },
+                                { className: 'justify-content-sm-center' },
+                                _react2.default.createElement('div', { className: 'col-1 hidden-md-up' }),
                                 _react2.default.createElement(
-                                    'h4',
-                                    null,
-                                    'Thank you so much for visiting lemonawyatt.com! I am currently actively seeking a position as a ',
+                                    'div',
+                                    { className: 'col-10 col-md-6 col-md-offset-6 contact' },
                                     _react2.default.createElement(
-                                        'b',
+                                        'h4',
                                         null,
-                                        'full stack software engineer'
-                                    ),
-                                    ' or ',
-                                    _react2.default.createElement(
-                                        'b',
-                                        null,
-                                        'solidity developer'
-                                    ),
-                                    '. If you like what you see, have any leads, or any interesting project ideas, please reach out to me at ',
-                                    _react2.default.createElement(
-                                        'a',
-                                        { href: 'mailto:lemonawyatt@gmail.com' },
-                                        'lemonawyatt@gmail.com'
-                                    ),
-                                    ' or through any of the social media sites below. Stay tuned for my upcoming blog BlackGirlonBlockchain.com!'
+                                        'Thank you so much for visiting lemonawyatt.com! I am currently actively seeking a position as a ',
+                                        _react2.default.createElement(
+                                            'b',
+                                            null,
+                                            'full stack software engineer'
+                                        ),
+                                        ' or ',
+                                        _react2.default.createElement(
+                                            'b',
+                                            null,
+                                            'solidity developer'
+                                        ),
+                                        '. If you like what you see, have any leads, or any interesting project ideas, please reach out to me at ',
+                                        _react2.default.createElement(
+                                            'a',
+                                            { href: 'mailto:lemonawyatt@gmail.com' },
+                                            'lemonawyatt@gmail.com'
+                                        ),
+                                        ' or through any of the social media sites below. Stay tuned for my upcoming blog BlackGirlonBlockchain.com!'
+                                    )
                                 )
                             )
                         )
