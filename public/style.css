@@ -273,6 +273,14 @@
       padding: 2rem;
       margin-top: 20vh;
     }
+
+    .social-icons li>h4 {
+      font-size: 1.25rem;
+    }
+
+    .connect {
+      padding: 0 !important;
+    }
   }
 
  @media only screen and (max-width: 768px) {
@@ -290,4 +298,24 @@
 
   h5 {
     line-height: 1.5;
+  }
+
+  .social-icons li {
+    display: inline-block;
+    font-size: 2.5em;
+    padding: .2em;
+    line-height: 76px;
+    vertical-align: middle;
+  }
+
+  .social-icons li:first-of-type{
+    padding-right: .4em !important;
+  }
+
+  .social-icons li>a {
+    color: #DB847A;
+  }
+
+  .connect {
+    font-size: 1.25rem !important;    
   }
