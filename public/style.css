@@ -183,10 +183,11 @@
     opacity: 0
   }
 
-  .card-wrapper:hover .card-body-hover {
+  .card-wrapper:hover .card-body-hover, .card-wrapper:active .card-body-hover {
     display: block !important;
     opacity: 1;
   }
+
 
   .other-work {
     background-color: #DB847A;

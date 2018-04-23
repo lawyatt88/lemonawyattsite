@@ -40,12 +40,7 @@ class Main extends Component {
     <div>
       <nav id="navbar" className="navbar fixed-top navbar-expand-lg navbar-light">
         <Link className="navbar-brand" to="/home" id="title">LeMona Wyatt</Link>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#top-nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon" />
-        </button>
-
-        <div className="collapse navbar-collapse d-flex justify-content-end" id="top-nav">
-        </div>
+        <div className="collapse navbar-collapse d-flex justify-content-end" id="top-nav" />
       </nav>
       <hr className="hr-nav" />
       {children}

@@ -30777,11 +30777,6 @@ var Main = function (_Component) {
             { className: 'navbar-brand', to: '/home', id: 'title' },
             'LeMona Wyatt'
           ),
-          _react2.default.createElement(
-            'button',
-            { className: 'navbar-toggler', type: 'button', 'data-toggle': 'collapse', 'data-target': '#top-nav', 'aria-controls': 'navbarSupportedContent', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation' },
-            _react2.default.createElement('span', { className: 'navbar-toggler-icon' })
-          ),
           _react2.default.createElement('div', { className: 'collapse navbar-collapse d-flex justify-content-end', id: 'top-nav' })
         ),
         _react2.default.createElement('hr', { className: 'hr-nav' }),
