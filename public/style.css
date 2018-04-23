@@ -183,12 +183,7 @@
     opacity: 0
   }
 
-  .card-wrapper:hover .card-body-hover {
-    display: block !important;
-    opacity: 1;
-  }
-
-  .card-wrapper:active .card-body-hover {
+  .card-wrapper:hover .card-body-hover, .card-wrapper:active .card-body-hover, .card-wrapper:focus .card-body-hover {
     display: block !important;
     opacity: 1;
   }
