@@ -36,6 +36,11 @@
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
     background-color: #ffffff;
+    justify-content: space-between !important;
+  }
+
+  nav > a, nav > a:hover {
+    color: rgba(0,0,0,.9)
   }
 
   .hr-nav {
@@ -269,7 +274,7 @@
     .contact-content {
       position: absolute;
       width: 100%;
-      background-color: rgba(252,245,239, 0.5);
+      background-color: rgba(252,245,239, 0.7);
       padding: 2rem;
       margin-top: 20vh;
     }

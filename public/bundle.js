@@ -30777,7 +30777,11 @@ var Main = function (_Component) {
             { className: 'navbar-brand', to: '/home', id: 'title' },
             'LeMona Wyatt'
           ),
-          _react2.default.createElement('div', { className: 'collapse navbar-collapse d-flex justify-content-end', id: 'top-nav' })
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { className: 'navbar-resume nav navbar-nav navbar-right', to: './LWyattResume-201804.pdf', id: 'title', target: '_blank' },
+            'View My Resume'
+          )
         ),
         _react2.default.createElement('hr', { className: 'hr-nav' }),
         children

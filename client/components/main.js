@@ -40,7 +40,7 @@ class Main extends Component {
     <div>
       <nav id="navbar" className="navbar fixed-top navbar-expand-lg navbar-light">
         <Link className="navbar-brand" to="/home" id="title">LeMona Wyatt</Link>
-        <div className="collapse navbar-collapse d-flex justify-content-end" id="top-nav" />
+        <Link className="navbar-resume nav navbar-nav navbar-right" to="./LWyattResume-201804.pdf" id="title" target="_blank">View My Resume</Link>
       </nav>
       <hr className="hr-nav" />
       {children}
