@@ -26,7 +26,7 @@ class Home extends Component {
         {
             name: "Picspiration",
             description: "Mobile application that harnesses the word predictability features of the Clarifai API to find relevant quotes based on image input.",
-            image: "",
+            image: "./images/Picspiration-03.png",
             link: "",
             github: "https://github.com/lawyatt88/picspiration"
         },
